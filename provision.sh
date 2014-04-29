@@ -12,7 +12,7 @@ apt-get install -y vim git curl
 
 # install apache2
 apt-get install -y apache2
-sed -i 's/\/var\/www/\/home\/vagrant\/public_html\/workouts\/public/' /etc/apache2/sites-available/default
+sed -i 's/\/var\/www/\/home\/vagrant\/public_html\/public/' /etc/apache2/sites-available/default
 sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/sites-available/default
 a2enmod rewrite
 /etc/init.d/apache2 restart
@@ -31,3 +31,6 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 apt-get install -y nodejs
 sudo npm install -g grunt-cli bower
+
+# run deploy script
+su vagrant -c "bash /home/vagrant/public_html/build.sh"

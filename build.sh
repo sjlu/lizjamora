@@ -15,9 +15,6 @@ curl -sS https://getcomposer.org/installer | php
 # install deps
 php composer.phar install
 
-# migrate db
-php artisan migrate
-
 # install bower components
 bower install
 

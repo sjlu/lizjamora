@@ -56,5 +56,5 @@ module.exports = function (grunt) {
   /*
    * Tasks
    */
-  grunt.registerTask('default', ['less', 'watch']);
+  grunt.registerTask('default', ['less']);
 };
